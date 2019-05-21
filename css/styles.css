@@ -1,18 +1,54 @@
 body{
-  background-color: #0e2e47
-;
+  background-color: #0e2e47;
+  text-align: center;
 }
+
+
+/* navbar */
 .corp-logo-container{
+  position:absolute;
+  top:0;
+  left:5%;
   padding: 0.5% 0.5%;
 }
 .corp-logo{
   padding: 3% 5%;
   text-align: center;
 }
-.navbar-brand{
-  padding-left:3%;
-  font-size:6rem;
+.nav-div-out{
+  margin-top: 2rem;
+  padding: 1.2rem;
+  font-size: 1rem;
+
+
 }
-.nav-content{
-  padding-right: 50%;
+.nav-div{
+  border-top: 1px solid;
+  border-color: white;
+  padding:0 20px;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  color:white;
+}
+/* central image */
+
+.central-image{
+  position:relative;
+
+
+}
+.central-clock{
+  margin:auto;
+  display:block;
+}
+.central-logo-in{
+  padding:0.5%;
+}
+.central-logo{
+  position:absolute;
+  width:100%;
+  left:0;
+  top:30%;
+  margin:auto;
 }
