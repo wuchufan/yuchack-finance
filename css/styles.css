@@ -14,7 +14,7 @@ body{
 }
 .background{
   position:relative;
-  background-image: linear-gradient(rgba(14,47,72,0.8) 20%, 70%,rgba(255,255,255,1)90%);
+  background-image: linear-gradient(rgba(14,47,72,0.85) 20%, 60%,rgba(255,255,255,1)72%);
 }
 
 
@@ -30,6 +30,10 @@ body{
   padding: 3% 5%;
   text-align: center;
 }
+.hover-active-effect:hover{
+  /* border-color:black;
+  color:black; */
+}
 .nav-div-out{
   margin-top: 2rem;
   padding: 1.2rem;
@@ -38,14 +42,30 @@ body{
 
 }
 .nav-div{
+
   border-top: 1px solid;
   border-color: white;
+  color: white;
   padding:0 20px;
 }
+.nav-div:hover, .nav-div:focus{
+  border-color:#7890A3;
+
+  color:#7890A3;
+
+}
+
 
 .navbar-dark .navbar-nav .nav-link{
-  color:white;
+  color:inherit;
 }
+.navbar-dark .navbar-nav .nav-link:focus{
+  color:inherit;
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+  color:inherit;
+}
+
 /* central image */
 
 .central-image{
@@ -55,10 +75,14 @@ body{
 }
 .central-clock{
   margin:auto;
+
   display:block;
+  width:40%;
+  height:40%;
 }
 .central-logo-in{
   padding:0.5%;
+
 }
 .central-logo{
   position:absolute;
@@ -69,10 +93,45 @@ body{
 }
 
 /* bottom half */
-#about-title{
-  
+
+#about-title, #about-title:hover{
+
+  font-family: futura-lt-w01-book, sans-serif;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  font-size: 28px;
+  color:#0E2E47;
 }
+
+#corp-about{
+  font: normal normal normal 16px/1.4em futura-lt-w01-light,sans-serif;
+  /* font-family: futura-lt-w01-book, sans-serif;
+  font-size: 16px; */
+  line-height: 1.6em;
+  color: #0E2E47;
+}
+.contact-information{
+  padding: 7%;
+}
+
 .corp-info{
   display:inline-block;
+  padding-top: 80%;
   width: 40%;
+}
+
+#contact-title{
+  font:normal normal bold 28px/1.4em futura-lt-w01-book,sans-serif;
+  color:#0E2E47;
+  letter-spacing: 0.2em;
+}
+.contact-content{
+  font-size: 20px;
+}
+/* footer */
+.footer{
+  display:inline-block;
+  font-size: 13px;
+  color: #0E2E47;
+  margin: 0 3% 2%;
 }
