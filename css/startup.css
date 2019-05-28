@@ -34,10 +34,7 @@ img{
   padding: 3% 5%;
   text-align: center;
 }
-.hover-active-effect:hover{
-  /* border-color:black;
-  color:black; */
-}
+
 .nav-div-out{
   margin-top: 2rem;
   padding: 1.2rem;
@@ -72,7 +69,7 @@ img{
 /* startup logo */
 .startup{
   padding-top: 10%;
-  padding-bottom: 20%;
+  padding-bottom: 10%;
   }
 
 .startup-left{
@@ -92,6 +89,77 @@ img{
   font-family: 'Raleway', sans-serif;
   font-size:60px;
   line-height: 0.9em;
+}
+/* startup plan */
+.plan-title{
+
+  text-align: left;
+  font-size:40px;
+  font-weight: bold;
+  color:white;
+  line-height:0.9em;
+
+}
+.plan-tdiv{
+  padding-top:20%;
+  padding-left: 60%;
+}
+.plan-tb{
+  letter-spacing:0.25em;
+  text-shadow: 3px 3px 2px black;
+}
+.plan-steps{
+  text-align: left;
+}
+.steps{
+
+  color:white;
+  width:50%;
+
+  font-size:19px;
+
+}
+.step1{
+  position:relative;
+  left:20%;
+}
+.step2, .step3, .step4, .step5, .step6{
+  position:relative;
+  bottom:72px;
+}
+.step3{
+  bottom:156px;
+  left:233px;
+}
+.step4{
+  bottom:197px;
+  left:162px;
+}
+.step5{
+  bottom: 264px;
+  left:-30px;
+}
+.step6{
+  bottom: 367px;
+  left:189px;
+}
+
+
+.step1-img, .step3-img,.step6-img, .step4-img{
+  margin-left:30px;
+}
+.step2-img, .step5-img{
+  margin-right:30px;
+}
+
+/* article */
+.article{
+  margin: -15% auto 5%;
+  font-size:15px;
+  width:45%;
+  text-align: left;
+
+  color:#CCCCCC;
 }
 
 /* footer */
