@@ -1,0 +1,41 @@
+
+/* estates developers */
+
+.es-table{
+  margin: 200px auto;
+  width:50%;
+  table-layout: fixed;
+}
+
+.tb-title, .tb-p{
+
+  color:#CCCCCC;
+  font-family:futura-lt-w01-light, sans-serif;
+  text-align: left;
+  overflow: hidden;
+}
+.tb-title{
+  font-size:19px;
+}
+.tb-p{
+  font-size:12px;
+}
+
+
+.tb-image{
+  float:left;
+  margin: 0 30px;
+}
+
+/* subjects */
+.subject1{
+  margin: 50px auto;
+  width: 60%;
+
+}
+.s-title{
+  text-align: left;
+}
+/* .carousel-control-next {
+    filter: invert(100%);
+} */
