@@ -28,14 +28,63 @@
 }
 
 /* subjects */
-.subject1{
+
+/* subject1 */
+.subject1, .subject2{
   margin: 50px auto;
-  width: 60%;
+  width: 50%;
 
 }
 .s-title{
   text-align: left;
+  font-size: 27px;
+  font-weight: bold;
+  text-shadow:rgba(0, 0, 0, 0.4) 0px 4px 5px;
+  letter-spacing:0.25em;
+  font-family:"Raleway";
+  color:white;
 }
-/* .carousel-control-next {
-    filter: invert(100%);
-} */
+
+.carousel-arrow{
+  width:5%;
+  height:10%;
+  margin-top:20%;
+  filter: invert(100%);
+}
+.content{
+  position:absolute;
+  top:0;
+  right:0;
+  background-color:rgba(255,255,255, 0.8);
+  height:100%;
+  width:35%;
+}
+hr{
+  width:10%;
+  border: 1px solid black;
+  margin-top:30px;
+
+}
+.word-container{
+  margin:15% auto 0;
+  width:75%;
+}
+.text-title{
+  font-size:28px;
+}
+
+.text-paragraph{
+  font-family: "Raleway";
+  font-size:13px;
+  color: #0E2E47;
+  line-height:190%;
+  margin-top:30px;
+}
+
+/* discussion */
+.discussion{
+  width:50%;
+  margin: 100px auto;
+  color: #CCCCCC;
+  text-align:left;
+}
