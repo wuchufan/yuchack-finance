@@ -24,14 +24,17 @@
 
 .tb-image{
   float:left;
-  margin: 0 30px;
+  margin: 0 40px;
+}
+td{
+  padding-bottom: 60px;
 }
 
 /* subjects */
 
 /* subject1 */
 .subject1, .subject2{
-  margin: 50px auto;
+  margin: 120px auto;
   width: 50%;
 
 }
@@ -87,4 +90,15 @@ hr{
   margin: 100px auto;
   color: #CCCCCC;
   text-align:left;
+}
+.d-date{
+  font-size:12px;
+  font-family:"Arial","Helvetica","sans-serif";
+}
+.d-title{
+  font-size:16px;
+  color: #A8BFD1;
+}
+.d-p{
+  font-size: 12px;
 }
