@@ -17,6 +17,9 @@ app.get("/startup",function(req,res){
 app.get("/estate",function(req,res){
   res.render("estate");
 });
+app.get("/news",function(req,res){
+  res.render("news");
+});
 
 app.use(express.static("public"))
 app.listen(3000,function(){
