@@ -3,10 +3,13 @@
 
 .es-table{
   margin: 200px auto;
-  width:50%;
+  width:80%;
   table-layout: fixed;
 }
-
+.es-table img{
+  height:8.854vw;
+  width:8.854vw;
+}
 .tb-title, .tb-p{
 
   color:#CCCCCC;
@@ -15,10 +18,10 @@
   overflow: hidden;
 }
 .tb-title{
-  font-size:19px;
+  font-size:1.484vw;
 }
 .tb-p{
-  font-size:12px;
+  font-size:0.938vw;
 }
 
 
@@ -27,22 +30,26 @@
   margin: 0 40px;
 }
 td{
-  padding-bottom: 60px;
+  padding-bottom: 4.688vw;
 }
 
 /* subjects */
 
 /* subject1 */
+.subject img{
+  width:100%;
+}
 .subject1, .subject2{
-  margin: 120px auto;
-  width: 50%;
+  margin: 9.375vw auto;
+  width: 75%;
 
 }
+
 .s-title{
   text-align: left;
-  font-size: 27px;
+  font-size: 2.109vw;
   font-weight: bold;
-  text-shadow:rgba(0, 0, 0, 0.4) 0px 4px 5px;
+  text-shadow:rgba(0, 0, 0, 0.4) 0px 0.313vw 0.391vw;
   letter-spacing:0.25em;
   font-family:"Raleway";
   color:white;
@@ -73,12 +80,12 @@ hr{
   width:75%;
 }
 .text-title{
-  font-size:28px;
+  font-size:2.188vw;
 }
 
 .text-paragraph{
   font-family: "Raleway";
-  font-size:13px;
+  font-size:1.016vw;
   color: #0E2E47;
   line-height:190%;
   margin-top:30px;
@@ -92,13 +99,13 @@ hr{
   text-align:left;
 }
 .d-date{
-  font-size:12px;
+  font-size:0.938vw;
   font-family:"Arial","Helvetica","sans-serif";
 }
 .d-title{
-  font-size:16px;
+  font-size:1.250vw;
   color: #A8BFD1;
 }
 .d-p{
-  font-size: 12px;
+  font-size: 0.938vw;
 }

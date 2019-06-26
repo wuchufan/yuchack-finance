@@ -1,3 +1,5 @@
+//jshint esversion:6
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -24,7 +26,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-app.use(express.static("public"))
+app.use(express.static("public"));
 
 //home route
 app.get("/", function(req, res) {
@@ -67,11 +69,11 @@ app.get("/news/compose", function(req, res) {
     newsLBBody: newsLBBody
   });
   res.render("compose");
-})
+});
 
 app.get("/edit", function(req, res) {
-  res.render("edit")
-})
+  res.render("edit");
+});
 
 
 app.listen(3000, function() {

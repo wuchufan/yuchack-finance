@@ -1,76 +1,14 @@
-body{
 
-  text-align: center;
-}
-img{
-  max-width:100%;
-  max-height:100%;
-}
-/* background */
-
-/* #myvideo{
-  position:fixed;
-  right:0;
-
-  bottom:-10%;
-  min-width:100%;
-  min-height:100%;
-}
-.background{
-  position:relative;
-  background-color:rgba(14,47,72,0.85);
-} */
-
-
-
-/* navbar */
-/* .corp-logo-container{
-  position:absolute;
-  top:0;
-  left:5%;
-  padding: 0.5% 0.5%;
-}
-.corp-logo{
-  padding: 3% 5%;
-  text-align: center;
-}
-
-.nav-div-out{
-  margin-top: 2rem;
-  padding: 1.2rem;
-  font-size: 1rem;
-
-
-}
-.nav-div{
-
-  border-top: 1px solid;
-  border-color: white;
-  color: white;
-  padding:0 20px;
-}
-.nav-div:hover, .nav-div:focus{
-  border-color:#7890A3;
-
-  color:#7890A3;
-
-}
-
-
-.navbar-dark .navbar-nav .nav-link{
-  color:inherit;
-}
-.navbar-dark .navbar-nav .nav-link:focus{
-  color:inherit;
-}
-.navbar-dark .navbar-nav .nav-link:hover{
-  color:inherit;
-} */
 /* startup logo */
 .startup{
-  padding-top: 10%;
-  padding-bottom: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+
+
   }
+.startup img{
+  width:100%;
+}
 
 .startup-left{
   background-color: #00305b;
@@ -79,6 +17,7 @@ img{
 .startup-left, .startup-right{
   padding:0;
 }
+
 .startup-title{
   margin-top: 15%;
   color:white;
@@ -87,14 +26,17 @@ img{
 .bg-font{
   font-weight: 900;
   font-family: 'Raleway', sans-serif;
-  font-size:60px;
+  font-size:4.688vw;
   line-height: 0.9em;
+}
+.sm-font{
+  font-size:1.250vw;
 }
 /* startup plan */
 .plan-title{
 
   text-align: left;
-  font-size:40px;
+  font-size:3.125vw;
   font-weight: bold;
   color:white;
   line-height:0.9em;
@@ -106,7 +48,7 @@ img{
 }
 .plan-tb{
   letter-spacing:0.25em;
-  text-shadow: 3px 3px 2px black;
+  text-shadow: 0.234vw 0.234vw 0.156 black;
 }
 .plan-steps{
   text-align: left;
@@ -116,7 +58,7 @@ img{
   color:white;
   width:50%;
 
-  font-size:19px;
+  font-size:1.484vw;
 
 }
 .step1{
@@ -125,37 +67,60 @@ img{
 }
 .step2, .step3, .step4, .step5, .step6{
   position:relative;
-  bottom:72px;
+  bottom:5.625vw;
 }
 .step3{
-  bottom:156px;
-  left:233px;
+  bottom:12.188vw;
+  left:18.203vw;
 }
 .step4{
-  bottom:197px;
-  left:162px;
+  bottom:15.391vw;
+  left:12.656vw;
 }
 .step5{
-  bottom: 264px;
-  left:-30px;
+  bottom: 20.625vw;
+  left:2.344vw;
 }
 .step6{
-  bottom: 367px;
-  left:189px;
+  bottom: 28.672vw;
+  left:14.766vw;
 }
 
-
+.step1-img{
+  height:8.281vw;
+  width:8.281vw;
+}
+.step2-img{
+  height:13.828vw;
+  width:10.391vw;
+}
+.step3-img{
+  width:8.516vw;
+  height:11.094vw;
+}
+.step4-img{
+  width:9.063vw;
+  height:9.063vw;
+}
+.step5-img{
+  height:12.578vw;
+  width:9.453vw;
+}
+.step6-img{
+  height:13.281vw;
+  width:10.078vw;
+}
 .step1-img, .step3-img,.step6-img, .step4-img{
-  margin-left:30px;
+  margin-left:2.344vw;
 }
 .step2-img, .step5-img{
-  margin-right:30px;
+  margin-right:2.344vw;
 }
 
 /* article */
 .article{
   margin: -15% auto 5%;
-  font-size:15px;
+  font-size:1.172vw;
   width:45%;
   text-align: left;
 
@@ -168,7 +133,7 @@ footer{
 }
 .footer{
   display:inline-block;
-  font-size: 13px;
+  font-size: 1.016vw;
   color: #0E2E47;
   margin: 0 3% 2%;
 }

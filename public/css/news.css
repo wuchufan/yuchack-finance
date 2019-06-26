@@ -1,57 +1,60 @@
+img{
+  width:100%;
+}
 /* article */
 .container-fluid {
-  margin: 100px 0;
+  margin: 7.813vw 0;
 }
 
 .article-container {
   background-color: white;
-  width: 87%;
-  margin-left: 100px;
+  /* width: 87%; */
+  /* margin-left: 100px; */
 }
 
 .side {
   text-align: left;
-  height:500px;
+  height:39.063vw;
   color:white;
   width:80%;
 }
 
 .articles {
   margin: 0 auto;
-  padding:30px 0;
+  padding:2.344vw 0;
   /* background-color: white; */
   width: 95%;
   text-align: left;
 }
 
 .a-t {
-  font-size: 28px;
+  font-size: 2.188vw;
   font-weight: bold;
   color: #0E2E47;
 }
 
 .a-d {
-  font-size: 14px;
+  font-size: 1.094vw;
   color: #0E2E47;
   font-weight: lighter;
 }
 
 .a-img {
-  margin: 14px 0;
+  margin: 1.094vw 0;
 }
 
 .a-p {
-  font-size: 16px;
+  font-size: 1.250vw;
   color: #0E2E47;
 }
 
 /* feature */
 
 .side hr {
-border: 0.5px solid white;
+border: 0.039px solid white;
 }
 .side h1{
-  font-size: 19px;
+  font-size: 1.484vw;
   font-weight:lighter;
 }
 .side img{
@@ -59,15 +62,15 @@ border: 0.5px solid white;
   height:100%;
 }
 .side h2{
-  font-size: 19px;
+  font-size: 1.484vw;
 }
 .side-date{
-  font-size: 12px;
+  font-size: 0.938vw;
   color: #CCCCCC;
   font-weight:lighter;
 }
 
 /* recent */
 .recent{
-  margin: 50px 0;
+  margin: 3.906vw 0;
 }
