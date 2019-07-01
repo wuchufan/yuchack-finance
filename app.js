@@ -12,7 +12,7 @@ const methodOverride = require('method-override');
 const mongoose = require("mongoose");
 
 const app = express();
-// app.use(methodOverride('_method'));
+app.use(methodOverride('_method'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
   extended: true
@@ -20,23 +20,23 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 
-//
-// //gridfs
-// const mongoURI = "mongodb://localhost:27017/newsImageDB";
-// const conn = mongoose.createConnection(mongoURI,{
-//   useNewUrlParser: true
-// });
-// mongoose.connect("mongodb://localhost:27017/newsDB", {
-//   useNewUrlParser: true
-// });
-//
-// //connect GridFS and Mongo
-// let gfs;
-// conn.once('open', function(){
-//   // Init stream
-//   gfs = Grid(conn.db, mongoose.mongo);
-//   gfs.collection('uploads');
-// });
+
+//gridfs
+const mongoURI = "mongodb://localhost:27017/newsImageDB";
+const conn = mongoose.createConnection(mongoURI,{
+  useNewUrlParser: true
+});
+mongoose.connect("mongodb://localhost:27017/newsDB", {
+  useNewUrlParser: true
+});
+
+//connect GridFS and Mongo
+let gfs;
+conn.once('open', function(){
+  // Init stream
+  gfs = Grid(conn.db, mongoose.mongo);
+  gfs.collection('uploads');
+});
 
 //mongoose schema
 const newsSchema = {
@@ -46,30 +46,30 @@ const newsSchema = {
   newsLBBody: Array
 };
 
-// //create storage engine
-// const storage = new GridFsStorage({
-//   url: mongoURI,
-//   options:{
-//     useNewUrlParser: true
-//   },
-//   file: (req, file) => {
-//     return new Promise((resolve, reject) => {
-//       crypto.randomBytes(16, (err, buf) => {
-//         if (err) {
-//           return reject(err);
-//         }
-//         const filename = buf.toString('hex') + path.extname(file.originalname);
-//         const fileInfo = {
-//           filename: filename,
-//           bucketName: 'uploads'
-//         };
-//         resolve(fileInfo);
-//       });
-//     });
-//   }
-// });
-//
-// const upload = multer({storage});
+//create storage engine
+const storage = new GridFsStorage({
+  url: mongoURI,
+  options:{
+    useNewUrlParser: true
+  },
+  file: (req, file) => {
+    return new Promise((resolve, reject) => {
+      crypto.randomBytes(16, (err, buf) => {
+        if (err) {
+          return reject(err);
+        }
+        const filename = buf.toString('hex') + path.extname(file.originalname);
+        const fileInfo = {
+          filename: filename,
+          bucketName: 'uploads'
+        };
+        resolve(fileInfo);
+      });
+    });
+  }
+});
+
+const upload = multer({storage});
 
 //mongoose model
 const newsModel = mongoose.model("news", newsSchema);
