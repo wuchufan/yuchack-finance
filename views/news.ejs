@@ -4,8 +4,8 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-3"></div>
-    <div class="col-5">
+    <div class="col-2"></div>
+    <div class="col-6">
       <div class="article-container">
         <div class="articles">
           <h1 class="a-t">「海外置產配置」一探究竟為什麼中國超級富豪都青睞佛州邁阿密？</h1>
@@ -20,7 +20,18 @@
             邁阿密房價比許多國際大城市便宜，對投資者相當具有吸引力。根據佳士得（Christ...</p>
         </div>
       </div>
-    </div>
+
+      <%for (i=0;i< foundNews.length;i++){%>
+        <div class="article-container">
+          <div class="articles">
+            <h1 class="a-t"><%=foundNews[i].newsTitle%></h1>
+            <h6 class="a-d"><%=foundNews[i].newsDate%></h6>
+            <p class="a-p"><%=foundNews[i].newsLBBody%></p>
+          </div>
+        </div>
+
+      <%}%>
+</div>
 
     <div class="col-2">
       <div class="side">

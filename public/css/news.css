@@ -8,8 +8,7 @@ img{
 
 .article-container {
   background-color: white;
-  /* width: 87%; */
-  /* margin-left: 100px; */
+  margin-bottom: 5vw;
 }
 
 .side {
@@ -51,7 +50,7 @@ img{
 /* feature */
 
 .side hr {
-border: 0.039px solid white;
+border: 0.039vw solid white;
 }
 .side h1{
   font-size: 1.484vw;
@@ -63,6 +62,7 @@ border: 0.039px solid white;
 }
 .side h2{
   font-size: 1.484vw;
+  margin-top:2vw;
 }
 .side-date{
   font-size: 0.938vw;
