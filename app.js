@@ -43,7 +43,8 @@ const newsSchema = {
   newsTitle: String,
   newsDate: String,
   newsBody: String,
-  newsLBBody: Array
+  newsLBBody: Array,
+  newsImage: String
 };
 
 //create storage engine
@@ -109,19 +110,20 @@ app.get("/news/compose", function(req, res) {
   res.render("compose");
 });
 
-app.post("/news/compose",upload.single('file'),function(req,res){
+app.post("/news/compose",upload.single('file1'),function(req,res){
 
   const newsTitle = req.body.newsTitle; //title
   const newsBody = req.body.newsBody; //article paragraphs
   const newsLBBody = req.body.newsBody.split("\r\n"); // article paragraphs broke in seperated paragraphs
+  const newsImage = req.file.filename; //give name of uploaded file/image
   var day = getTodayDate();
-
 
   const newNews = new newsModel ({
     newsTitle: newsTitle,
     newsDate: day,
     newsBody: newsBody,
-    newsLBBody: newsLBBody
+    newsLBBody: newsLBBody,
+    newsImage: newsImage
   });
 
   newNews.save(function(err,doc){
@@ -151,6 +153,37 @@ app.get("/files",function(req,res) {
 
   });
 });
+
+//@route GET /image/:filename
+//@desc display single file object
+
+
+app.get("/news/image/:filename",function(req,res) {
+
+  gfs.files.findOne({filename:req.params.filename},function(err,file){
+    //check if file
+    if (!file || file.length ===0){
+      return res.status(404).json({
+        err:'no file exists'
+      });
+    }
+    // check if image
+    if (file.contentType==='image/jpeg' || file.contentType === 'image/png'){
+      //Read output to browser
+      const readstream = gfs.createReadStream(file.filename);
+      readstream.pipe(res);
+    } else {
+      res.status(404).json({
+        err: 'not image'
+      });
+    }
+  });
+});
+
+app.get("/news/post",function(req,res){
+  res.render("news-post");
+});
+
 
 app.get("/edit", function(req, res) {
   res.render("edit");

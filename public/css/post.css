@@ -1,29 +1,27 @@
 img{
   width:100%;
 }
-/* article */
+/* big container */
 .container-fluid {
   margin: 7.813vw 0;
 }
-
-.article-container {
+.post-container{
   background-color: white;
-  margin-bottom: 5vw;
-}
-.article-container a {
-  color:#0E2E47;
-}
-.side {
-  text-align: left;
-
-  color:white;
+  margin: 10vw auto 0;
   width:80%;
-}
 
+}
+/* .post-inner-container{
+  width:95%;
+  background-color: #f9f3ec;
+  margin: 0 auto;
+} */
+
+/* article */
 .articles {
   margin: 0 auto;
   padding:2.344vw 0;
-  /* background-color: white; */
+
   width: 95%;
   text-align: left;
 }
@@ -48,11 +46,15 @@ img{
   font-size: 1.250vw;
   color: #0E2E47;
 }
-
 /* feature */
+.side {
+  text-align: left;
+  color:#0E2E47;
+  width:80%;
+}
 
 .side hr {
-border: 0.039vw solid white;
+border: 0.039vw solid #0E2E47;
 }
 .side h1{
   font-size: 1.484vw;

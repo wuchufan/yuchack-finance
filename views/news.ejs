@@ -24,8 +24,9 @@
       <%for (i=0;i< foundNews.length;i++){%>
         <div class="article-container">
           <div class="articles">
-            <h1 class="a-t"><%=foundNews[i].newsTitle%></h1>
+            <h1 class="a-t"><a href="/news/post" ><%=foundNews[i].newsTitle%></a></h1>
             <h6 class="a-d"><%=foundNews[i].newsDate%></h6>
+            <a href="/news/post"><img src="/news/image/<%=foundNews[i].newsImage%>" alt=""></a>
             <p class="a-p"><%=foundNews[i].newsLBBody%></p>
           </div>
         </div>
@@ -48,8 +49,8 @@
           <h1>Recent Posts</h1>
           <hr>
           <div>
-            <img src="images/news/n-1.webp" alt="news1">
-            <h2>「海外置產配置」一探究竟為什麼中國超級富豪都青睞佛州邁阿密？</h2>
+            <img src="/news/image/<%=foundNews[foundNews.length - 1].newsImage%>" alt="news1">
+            <h2><%=foundNews[foundNews.length - 1].newsTitle%></h2>
             <p class="side-date">February 2, 2017</p>
           </div>
         </div>
