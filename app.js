@@ -109,7 +109,7 @@ app.get("/news/compose", function(req, res) {
   res.render("compose");
 });
 
-app.post("/news/compose",function(req,res){
+app.post("/news/compose",upload.single('file'),function(req,res){
 
   const newsTitle = req.body.newsTitle; //title
   const newsBody = req.body.newsBody; //article paragraphs
@@ -131,6 +131,24 @@ app.post("/news/compose",function(req,res){
       console.log(err);
     }
     res.redirect("/news");
+  });
+});
+
+//@route GET /files
+//@desc Display all files in JSON
+app.get("/files",function(req,res) {
+
+  gfs.files.find().toArray(function(err,files) {
+    //check if files
+    if(!files || files.length===0){
+      res.status(404).json({
+        err:"no files"
+      });
+    } else {
+      //file exists
+      res.json(files);
+    }
+
   });
 });
 
