@@ -22,14 +22,16 @@
       </div>
 
       <%for (i=0;i< foundNews.length;i++){%>
-        <div class="article-container">
-          <div class="articles">
-            <h1 class="a-t"><a href="/news/post" ><%=foundNews[i].newsTitle%></a></h1>
-            <h6 class="a-d"><%=foundNews[i].newsDate%></h6>
-            <a href="/news/post"><img src="/news/image/<%=foundNews[i].newsImage%>" alt=""></a>
-            <p class="a-p"><%=foundNews[i].newsLBBody%></p>
-          </div>
+      <div class="article-container">
+        <div class="articles">
+          <h1 class="a-t"><a href="/news/single/<%=foundNews[i]._id%>"><%=foundNews[i].newsTitle%></a></h1>
+          <h6 class="a-d"><%=foundNews[i].newsDate%></h6>
+          <a href="/news/single/<%=foundNews[i]._id%>"><img src="/news/image/<%=foundNews[i].newsImage%>" alt=""></a>
+          <p class="a-p">
+            <%=foundNews[i].newsBody%>
+          </p>
         </div>
+      </div>
 
       <%}%>
 </div>
@@ -49,9 +51,14 @@
           <h1>Recent Posts</h1>
           <hr>
           <div>
-            <img src="/news/image/<%=foundNews[foundNews.length - 1].newsImage%>" alt="news1">
+            <%if (foundNews.length !==0){%>
+
+      <%if (foundNews[foundNews.length - 1].newsImage !== 'No Image Uploaded'){ %>
+      <img src="/news/image/<%=foundNews[foundNews.length - 1].newsImage%>" alt="news1">
+      <%}%>
             <h2><%=foundNews[foundNews.length - 1].newsTitle%></h2>
-            <p class="side-date">February 2, 2017</p>
+      <p class="side-date"><%=foundNews[foundNews.length - 1].newsDate%></p>
+      <%}%>
           </div>
         </div>
       </div>
