@@ -1,2 +1,29 @@
 <%- include("partials/heading") -%>
+<link rel="stylesheet" href="/css/compose.css">
+<link rel="stylesheet" href="/css/edit.css">
+<div class="container">
+
+
+<h1>Compose</h1>
+<form action="/news/single/<%=foundNews._id%>/edit" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label>Title</label>
+    <input type="text" class="form-control" name="newsTitle" value="<%=foundNews.newsTitle%>">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Post</label>
+    <textarea name="newsBody" class="form-control" rows="12"><%=foundNews.newsBody%></textarea>
+  </div>
+  <div class="input-group mb-3">
+
+    <div class="custom-file">
+      <input type="file" class="custom-file-input compose-input" id="file" name="file1">
+      <label class="custom-file-label compose-label" for="file">Choose image file</label>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Publish</button>
+</form>
+</div>
 <%- include("partials/footer") -%>

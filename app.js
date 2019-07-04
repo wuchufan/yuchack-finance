@@ -116,7 +116,7 @@ app.get("/news/single/:post/delete", function(req, res) {
     _id: req.params.post
   }, function(err, foundNews) {
     //check weather image is uploaded
-    if (foundNews.newsImage !== 'No Image Uploaded'){
+    if (foundNews.newsImage !== 'No Image Uploaded') {
       //removing image from Gridfs
       gfs.remove({
         filename: foundNews.newsImage,
@@ -251,10 +251,70 @@ app.get("/news/image/:filename", function(req, res) {
 
 
 app.get("/news/single/:post/edit", function(req, res) {
-  res.render("edit");
+  newsModel.findById({
+    _id: req.params.post
+  }, function(err, foundNews) {
+
+    res.render("edit", {
+      foundNews: foundNews
+
+    });
+  });
 });
 
 
+app.post("/news/single/:post/edit", upload.single('file1'), function(req, res) {
+
+  //title
+  const newsTitle = req.body.newsTitle;
+  //article paragraphs
+  const newsBody = req.body.newsBody;
+  // article paragraphs broke in seperated paragraphs
+  const newsLBBody = req.body.newsBody.split("\r\n");
+  //have access to News posts properties
+  newsModel.findById({
+    _id: req.params.post
+  }, function(err, foundNews) {
+    var newsImage = foundNews.newsImage;
+    //check if uploaded new image file
+    if (typeof(req.file) !== 'undefined') {
+      //if yes
+      //check if originally had image
+      if (newsImage !== 'No Image Uploaded') {
+        //if yes
+        //remove the original image
+        gfs.remove({
+          filename: newsImage,
+          root: 'uploads'
+        }, (err, gridStore) => {
+          if (err) {
+            return res.status(404).json({
+              err: err
+            });
+          }
+        });
+      }
+      //upload new image
+      newsImage = req.file.filename;
+    }
+
+    newsModel.findOneAndUpdate({
+      _id: req.params.post
+    }, {
+      newsTitle: newsTitle,
+      newsBody: newsBody,
+      newsLBBody: newsLBBody,
+      newsImage: newsImage
+
+    }, function(err) {
+      if (err) {
+        console.log(err);
+      } else {
+        res.redirect("/news");
+      }
+    });
+  });
+});
 
 
 app.listen(3000, function() {
