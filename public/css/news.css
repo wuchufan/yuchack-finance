@@ -76,3 +76,63 @@ border: 0.039vw solid white;
 .recent{
   margin: 3.906vw 0;
 }
+
+@media (min-width: 1281px){
+
+  /* article */
+  .container-fluid {
+    margin: 6.2503rem 0;
+  }
+
+  .article-container {
+    width:80%;
+    margin: 0 auto 4rem;
+    /* margin-bottom: 4rem; */
+  }
+
+
+
+  .articles {
+    padding:1.8752rem 0;
+  }
+
+  .a-t {
+    font-size: 1.7504rem;
+  }
+
+  .a-d {
+    font-size: 0.8752rem;
+  }
+
+  .a-img {
+    margin: 0.8752rem 0;
+  }
+
+  .a-p {
+    font-size: 1rem;
+
+  }
+
+  /* feature */
+
+  .side hr {
+  border: 0.0312rem solid white;
+  }
+  .side h1{
+    font-size: 1.187rem;
+
+  }
+
+  .side h2{
+    font-size: 1.187rem;
+    margin-top:1.6rem;
+  }
+  .side-date{
+    font-size: 0.7504rem;
+  }
+
+  /* recent */
+  .recent{
+    margin: 3.1248000000000005rem 0;
+  }
+}

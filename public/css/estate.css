@@ -109,3 +109,75 @@ hr{
 .d-p{
   font-size: 0.938vw;
 }
+
+@media (min-width:1281px){
+  .es-table{
+    width:50%;
+  }
+  .es-table img{
+    height:7.08rem;
+    width:7.08rem;
+
+  }
+  .tb-title{
+    font-size:1.187rem;
+  }
+  .tb-p{
+    font-size:0.75rem;
+  }
+  td{
+    padding-bottom: 3.7504rem;
+  }
+
+  .subject1, .subject2{
+    margin: 7.5rem auto;
+    width: 50%;
+
+  }
+
+  .s-title{
+
+    font-size: 1.68rem;
+    font-weight: bold;
+    letter-spacing:0.25em;
+
+  }
+
+  .text-title{
+    font-size:1.74rem;
+  }
+
+  .text-paragraph{
+    font-size:0.848rem;
+  }
+
+  .d-date{
+    font-size:0.78rem;
+  }
+  .d-title{
+    font-size:1rem;
+
+  }
+  .d-p{
+    font-size: 0.75rem;
+  }
+
+}
+@media (min-width:1281px) and (max-width: 1600px){
+  .subject1, .subject2{
+    margin: 7.5rem auto;
+    width: 70%;
+
+  }
+  .es-table{
+    width:60%;
+  }
+}
+
+@media(min-width:1600px) and (max-width:1750px){
+  .subject1, .subject2{
+    margin: 7.5rem auto;
+    width: 60%;
+
+  }
+}
