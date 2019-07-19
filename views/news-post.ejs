@@ -1,48 +1,51 @@
 <%- include("partials/heading") -%>
 <link rel="stylesheet" href="/css/post.css">
-<div class="post-container">
+<div class="row">
+  <div class="col-8 offset-2">
+    <div class="post-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-9">
+            <div class="article-container">
+              <div class="articles">
+                <h1 class="a-t"><%=newsTitle%></h1>
+                <h6 class="a-d"><%=newsDate%></h6>
+                <img class="a-img" src="/news/image/<%=newsImage%>" alt="">
+                <%for (i=0;i<newsLBBody.length;i++){%>
+                  <p class="a-p"><%=newsLBBody[i]%></p>
+                <%}%>
 
-
-
-  <div class="container">
-    <div class="row">
-      <div class="col-9">
-        <div class="article-container">
-          <div class="articles">
-            <h1 class="a-t"><%=newsTitle%></h1>
-            <h6 class="a-d"><%=newsDate%></h6>
-            <img class="a-img" src="/news/image/<%=newsImage%>" alt="">
-            <%for (i=0;i<newsLBBody.length;i++){%>
-              <p class="a-p"><%=newsLBBody[i]%></p>
-            <%}%>
-
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="side">
+              <div class="features">
+                <h1>Featured Posts</h1>
+                <hr>
+                <div>
+                  <img src="/images/news/n-1.webp" alt="news1">
+                  <h2>「海外置產配置」一探究竟為什麼中國超級富豪都青睞佛州邁阿密？</h2>
+                  <p class="side-date">February 2, 2017</p>
+                </div>
+              </div>
+              <div class="recent">
+                <h1>Recent Posts</h1>
+                <hr>
+                <div>
+                  <img src="/images/news/n-1.webp" alt="news1">
+                  <h2>「海外置產配置」一探究竟為什麼中國超級富豪都青睞佛州邁阿密？</h2>
+                  <p class="side-date">February 2, 2017</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-3">
-        <div class="side">
-          <div class="features">
-            <h1>Featured Posts</h1>
-            <hr>
-            <div>
-              <img src="/images/news/n-1.webp" alt="news1">
-              <h2>「海外置產配置」一探究竟為什麼中國超級富豪都青睞佛州邁阿密？</h2>
-              <p class="side-date">February 2, 2017</p>
-            </div>
-          </div>
-          <div class="recent">
-            <h1>Recent Posts</h1>
-            <hr>
-            <div>
-              <img src="/images/news/n-1.webp" alt="news1">
-              <h2>「海外置產配置」一探究竟為什麼中國超級富豪都青睞佛州邁阿密？</h2>
-              <p class="side-date">February 2, 2017</p>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 
 </div>
+
 <%- include("partials/footer") -%>

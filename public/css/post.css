@@ -5,17 +5,12 @@ img{
 .container-fluid {
   margin: 7.813vw 0;
 }
-.post-container{
+.container{
   background-color: white;
-  margin: 10vw auto ;
-  width:80%;
+  margin: 5vw auto ;
 
 }
-/* .post-inner-container{
-  width:95%;
-  background-color: #f9f3ec;
-  margin: 0 auto;
-} */
+
 
 /* article */
 .articles {
@@ -79,4 +74,67 @@ border: 0.045vw solid #0E2E47;
 /* recent */
 .recent{
   margin: 3.906vw 0;
+}
+
+@media (min-width:1281px){
+
+  /* big container */
+  .container-fluid {
+    margin: 6.250399999999999rem 0;
+  }
+  .container{
+
+    margin: 4rem auto ;
+
+  }
+
+
+  /* article */
+  .articles {
+
+    padding:1.8752rem 0;
+
+  }
+
+  .a-t {
+    font-size: 1.7504rem;
+
+  }
+
+  .a-d {
+    font-size: 0.8752rem;
+
+  }
+
+  .a-img {
+
+    margin: 0.8752rem 0;
+  }
+
+  .a-p {
+    font-size: 0.872rem;
+  }
+  /* feature */
+
+
+  .side hr {
+  border: 0.036rem solid #0E2E47;
+  }
+  .side h1{
+    font-size: 1.1871999999999998rem;
+
+  }
+  .side img{
+    width:100%;
+    height:100%;
+  }
+  .side h2{
+    font-size: 1.1871999999999998rem;
+    margin-top:1.6rem;
+  }
+  .side-date{
+    font-size: 0.7504rem;
+    color: #0E2E47;
+    font-weight:lighter;
+  }
 }
