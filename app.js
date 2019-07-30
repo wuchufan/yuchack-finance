@@ -22,11 +22,11 @@ app.use(express.static("public"));
 
 
 //gridfs
-const mongoURI = "mongodb://localhost:27017/newsImageDB";
+const mongoURI = "mongodb+srv://chufan-wu:myhappyday@cluster0-8k7im.mongodb.net/newsImageDB";
 const conn = mongoose.createConnection(mongoURI, {
   useNewUrlParser: true
 });
-mongoose.connect("mongodb://localhost:27017/newsDB", {
+mongoose.connect("mongodb+srv://chufan-wu:myhappyday@cluster0-8k7im.mongodb.net/newsDB", {
   useNewUrlParser: true
 });
 
