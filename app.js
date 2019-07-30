@@ -316,8 +316,13 @@ app.post("/news/single/:post/edit", upload.single('file1'), function(req, res) {
   });
 });
 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 
-app.listen(3000, function() {
+
+app.listen(port, function() {
   console.log("server is up at 3000");
 });
 
