@@ -22,11 +22,11 @@ app.use(express.static("public"));
 
 
 //gridfs
-const mongoURI = "mongodb+srv://chufan-wu:myhappyday@cluster0-8k7im.mongodb.net/newsImageDB";
+const mongoURI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0-8k7im.mongodb.net/newsImageDB`;
 const conn = mongoose.createConnection(mongoURI, {
   useNewUrlParser: true
 });
-mongoose.connect("mongodb+srv://chufan-wu:myhappyday@cluster0-8k7im.mongodb.net/newsDB", {
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0-8k7im.mongodb.net/newsDB`, {
   useNewUrlParser: true
 });
 
