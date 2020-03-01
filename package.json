@@ -21,6 +21,7 @@
   "homepage": "https://github.com/wuchufan/recreation#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "ejs": "^2.6.1",
     "express": "^4.17.1",
     "gridfs-stream": "^1.1.1",
